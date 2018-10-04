@@ -48,7 +48,9 @@ sorted_hash.each { |key,value|
 puts "La liste de devises contient #{count2} cours en dessous de 6000 $. Voulez-vous les voir (y/n)" #
 print "> "
 if gets.chomp == "y"
-	puts "#{sorted_hash.keys[0..count2-1]}"
+	require 'pp'
+	pp sorted_hash[0..count2-1]
+#	puts "{#{sorted_hash[0..count2-1]}"
 end
 
 puts "Le cours le plus haut parmi celles-ci est #{sorted_hash[count2-1][0]} : #{sorted_hash[count2-1][1]} $."
