@@ -10,15 +10,7 @@ class ArrayTraining
 #Détection des handles contenant des chiffres
 
 	def figures_detection
-		with_figures  = Array.new
-
-		array.each do |handle|
-			if handle.index(/[0-9]/) != nil
-				with_figures << handle
-			end
-		end
-
-		return(with_figures.length)
+		array.grep(/[0-9]/).length
 	end
 
 #Détection des handles contenant une string
@@ -54,15 +46,7 @@ class ArrayTraining
 #Détection handles contenant une majuscules
 
 	def upcase_detection
-		with_upcase = Array.new
-
-		array.each do |handle|
-			if handle.index(/[A-Z]/) != nil
-				with_upcase << handle
-			end
-		end
-
-		return with_upcase.length
+		array.grep(/[A-Z]/).length
 	end
 
 #Détection handles contenant un caractère 
